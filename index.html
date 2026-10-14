@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MPSI Quiz - GK | GS | Math</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="box">
+
+    <!-- START -->
+    <div id="start" class="screen active">
+      <h1>🎯 MPSI Quiz</h1>
+      <p>Previous Year Questions Practice</p>
+      <button onclick="startQuiz('gk')">🌍 GK Quiz</button>
+      <button onclick="startQuiz('gs')">📚 GS Quiz</button>
+      <button onclick="startQuiz('math')">🧮 Math Quiz</button>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="quiz" class="screen">
+      <div class="top">
+        <span id="qnum">Q 1 / 30</span>
+        <span id="timer">⏱ 00:00</span>
+      </div>
+      <div class="bar"><div id="fill"></div></div>
+
+      <h2 id="question">Loading...</h2>
+      <div id="options"></div>
+
+      <div class="btns">
+        <button onclick="prev()">⬅ Prev</button>
+        <button onclick="next()">Next ➡</button>
+        <button id="submit" onclick="submitQuiz()">✅ Submit</button>
+      </div>
+    </div>
+
+    <!-- RESULT -->
+    <div id="result" class="screen">
+      <h1>🏆 Result</h1>
+      <div class="circle"><span id="score">0/0</span></div>
+      <p id="msg"></p>
+      <div class="stats">
+        <div class="green"><h3 id="c">0</h3>Correct</div>
+        <div class="red"><h3 id="w">0</h3>Wrong</div>
+        <div class="orange"><h3 id="s">0</h3>Skipped</div>
+      </div>
+      <button onclick="location.reload()">🔄 Restart</button>
+    </div>
+
+  </div>
+
+  <script src="gk-questions.js"></script>
+  <script src="gs-questions.js"></script>
+  <script src="math-questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
